@@ -1,3 +1,10 @@
 <main>
-  <p>body works!</p>
+  <div class="entities">
+    <div class="single-entity" *ngFor="let entity of entities">
+      <p><span>Id:</span>&nbsp;{{entity.id}}</p>
+      <p><span>Description:</span>&nbsp;{{entity.description}}</p>
+      <p><span>Quantity Order:</span>&nbsp;{{entity.qtyOrder}}</p>
+      <p><span>Delivery Date:</span>&nbsp;{{entity.deliveryDate}}</p>
+    </div>
+  </div>
 </main>
