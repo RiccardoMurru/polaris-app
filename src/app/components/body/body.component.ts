@@ -15,7 +15,6 @@ export class BodyComponent implements OnInit{
       ((response: Entity[]) => {
         this.entities = response;
         console.log([...response]);
-
       })
     );
   }
