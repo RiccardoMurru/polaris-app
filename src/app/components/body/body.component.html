@@ -4,7 +4,22 @@
       <p><span>Id:</span>&nbsp;{{entity.id}}</p>
       <p><span>Description:</span>&nbsp;{{entity.description}}</p>
       <p><span>Quantity Order:</span>&nbsp;{{entity.qtyOrder}}</p>
-      <p><span>Delivery Date:</span>&nbsp;{{entity.deliveryDate}}</p>
+      <p><span>Delivery Date:</span>&nbsp;{{entity.deliveryDate | date}}</p>
     </div>
   </div>
+  <form>
+    <div class="input">
+      <label for="qtyOrder">Quantity order</label>
+      <input type="number" [(ngModel)]="qtyOrder" id="qtyOrder" name="qtyOrder" required>
+    </div>
+    <div class="input">
+      <label for="description">Description</label>
+      <input type="text" [(ngModel)]="description" id="description" name="description" required>
+    </div>
+    <div class="input">
+      <label for="description">Delivery Date</label>
+      <input type="date" [(ngModel)]="deliveryDate" id="deliveryDate" name="deliveryDate" required>
+    </div>
+    <button (click)="createEntity()">Save</button>
+  </form>
 </main>
